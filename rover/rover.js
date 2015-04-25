@@ -22,13 +22,26 @@ function moveRover(rover){
 
 }
 function viewPosition(rover){
-	console.log("Rover position X is: " + Rover.position[0]);
-	console.log("Rover position Y is: " + Rover.position[1]);
+	document.getElementById("posX").innerHTML = Rover.position[0];
+	document.getElementById("posY").innerHTML = Rover.position[1];
 }
-
-moveRover();
-viewPosition()
-moveRover();
-moveRover();
-moveRover();
-viewPosition();
+function clickUP(rover){
+	Rover.direction = 'N';
+	moveRover();
+	viewPosition();
+}
+function clickDown(rover){
+	Rover.direction = 'S';
+	moveRover();
+	viewPosition();
+}
+function clickLeft(rover){
+	Rover.direction = 'W';
+	moveRover();
+	viewPosition();
+}
+function clickRight(rover){
+	Rover.direction = 'E';
+	moveRover();
+	viewPosition();
+}
