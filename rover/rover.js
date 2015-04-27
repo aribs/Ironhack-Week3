@@ -27,21 +27,42 @@ function viewPosition(rover){
 }
 function clickUP(rover){
 	Rover.direction = 'N';
-	moveRover();
-	viewPosition();
+	if(Rover.position[0] === 10){
+		alert("The rover exit of the planet, please change the direction");
+		
+	}
+	else{
+		moveRover();
+		viewPosition();
+	}
 }
 function clickDown(rover){
 	Rover.direction = 'S';
-	moveRover();
-	viewPosition();
+	if(Rover.position[0] === -10){
+		alert("The rover exit of the planet, please change the direction");
+	}
+	else{
+		moveRover();
+		viewPosition();
+	}
 }
 function clickLeft(rover){
 	Rover.direction = 'W';
-	moveRover();
-	viewPosition();
+	if(Rover.position[1] === -10){
+		alert("The rover exit of the planet, please change the direction");
+	}
+	else{
+		moveRover();
+		viewPosition();
+	}
 }
 function clickRight(rover){
 	Rover.direction = 'E';
+	if(Rover.position[1] === 10){
+		alert("The rover exit of the planet, please change the direction");
+	}
+	else{
 	moveRover();
 	viewPosition();
+	}
 }
